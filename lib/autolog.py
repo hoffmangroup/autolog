@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import division
 
-__version__ = "$Revision: 1.1.1.1 $"
+__version__ = "$Revision: 1.2 $"
 
 import inspect
 import logging
@@ -35,7 +35,7 @@ class AutoLog(object):
         res = inspect.stack()[stacklevel][0].f_globals["__name__"]
         
         if res == "__main__":
-            res = sys.argv[0]
+            res = path(sys.argv[0]).namebase
 
         if not res:
             res = "root"
