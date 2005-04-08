@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import division
 
-__version__ = "$Revision: 1.2 $"
+__version__ = "$Revision: 1.3 $"
 
 import inspect
 import logging
@@ -16,10 +16,14 @@ if LOGGINGRC_PATH.exists():
 else:
     logging.basicConfig()
 
-class AutoLog(object):
+class autolog(object):
+    def __init__(self):
+        self._name = self._get_name()
+        self._logger = logging.getLogger(self._name)
+    
     def __getitem__(self, name):
         if name.startswith("."):
-            name = self._defaultname() + name
+            name = self._name + name
             
         return logging.getLogger(name)
 
@@ -28,10 +32,10 @@ class AutoLog(object):
         call the default logger for anything other than item
         subscripting
         """
-        return getattr(self[self._defaultname()], name)
+        return getattr(self._logger, name)
 
     @staticmethod
-    def _defaultname(stacklevel=2):
+    def _get_name(stacklevel=2):
         res = inspect.stack()[stacklevel][0].f_globals["__name__"]
         
         if res == "__main__":
@@ -41,5 +45,3 @@ class AutoLog(object):
             res = "root"
 
         return res
-
-autolog = AutoLog()

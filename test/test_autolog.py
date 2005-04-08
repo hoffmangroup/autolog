@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
-__version__ = "$Revision: 1.1.1.1 $"
+__version__ = "$Revision: 1.2 $"
 
 from autolog import autolog
 import unittest
 
-autolog.error("error test")
+LOG = autolog()
+
+LOG.error("error test")
 
 if __name__ == "__main__":
     unittest.main()
