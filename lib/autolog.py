@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import division
 
-__version__ = "$Revision: 1.3 $"
+__version__ = "$Revision: 1.4 $"
 
 import inspect
 import logging
@@ -12,7 +12,7 @@ import sys
 LOGGINGRC_PATH = path("~/.loggingrc").expand()
 
 if LOGGINGRC_PATH.exists():
-    logging.config.fileConfig(path(LOGGINGRC_PATH))
+    logging.config.fileConfig(LOGGINGRC_PATH)
 else:
     logging.basicConfig()
 
