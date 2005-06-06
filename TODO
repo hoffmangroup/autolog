@@ -1,0 +1,3 @@
+change uses of LOG to _log
+change code to find caller off of logging.Logger.findCaller()
+submit as patch
