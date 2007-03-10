@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""autolog: quick logging setup
+"""autolog: quick and easy logging setup
 
 Autolog makes the standard Python logging module easier to set up.
 """
@@ -33,6 +33,8 @@ setup(name=name,
       long_description = long_description,
       package_dir = {'': 'lib'},
       py_modules = ['autolog'],
+      requires=['disttest', 'path.py'],
+      setup_requires=['disttest', 'path.py'],
       cmdclass = {"install": disttest.install,
                   "test": disttest.test}
       )
