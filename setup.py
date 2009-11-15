@@ -7,8 +7,7 @@ Autolog makes the standard Python logging module easier to set up.
 
 __version__ = "0.1.0"
 
-from distutils.core import setup
-import disttest
+from setuptools import setup
 
 doclines = __doc__.splitlines()
 name, short_description = doclines[0].split(": ")
@@ -33,8 +32,5 @@ setup(name=name,
       long_description = long_description,
       package_dir = {'': 'lib'},
       py_modules = ['autolog'],
-      requires=['disttest', 'path.py'],
-      setup_requires=['disttest', 'path.py'],
-      cmdclass = {"install": disttest.install,
-                  "test": disttest.test}
+      install_requires=['path']
       )
