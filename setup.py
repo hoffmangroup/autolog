@@ -5,7 +5,7 @@
 Autolog makes the standard Python logging module easier to set up.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 from setuptools import setup
 
@@ -27,7 +27,7 @@ setup(name=name,
       author_email="hoffman+%s@ebi.ac.uk" % name.lower(),
       url=url,
       download_url=download_url,
-      license="GNU GPL",
+      license="GNU GPL v2",
       classifiers=classifiers,
       long_description = long_description,
       package_dir = {'': 'lib'},
