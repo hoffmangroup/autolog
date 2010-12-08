@@ -5,7 +5,7 @@
 Autolog makes the standard Python logging module easier to set up.
 """
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 # Copyright 2005,2007,2009-2010 Michael M. Hoffman <mmh1@washington.edu>
 
