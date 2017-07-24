@@ -1,4 +1,5 @@
 0.1.3:
+* autolog: replace forked-path dependency with path.py
 
 
 
