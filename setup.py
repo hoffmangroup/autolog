@@ -37,5 +37,5 @@ setup(name=name,
       long_description = long_description,
       package_dir = {'': 'lib'},
       py_modules = ['autolog'],
-      install_requires=['forked-path']
+      install_requires=['path.py']
       )

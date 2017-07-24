@@ -6,10 +6,10 @@ __version__ = "$Revision: 1.5 $"
 import inspect
 import logging
 import logging.config
-from path import path
+from path import Path
 import sys
 
-LOGGINGRC_PATH = path("~/.loggingrc").expand()
+LOGGINGRC_PATH = Path("~/.loggingrc").expand()
 
 if LOGGINGRC_PATH.exists():
     logging.config.fileConfig(LOGGINGRC_PATH)
@@ -39,7 +39,7 @@ class autolog(object):
         res = inspect.stack()[stacklevel][0].f_globals["__name__"]
 
         if res == "__main__":
-            res = path(sys.argv[0]).namebase
+            res = Path(sys.argv[0]).namebase
 
         if not res:
             res = "root"
