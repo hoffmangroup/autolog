@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-from __future__ import division
+from __future__ import absolute_import, division
 
-from __future__ import absolute_import
 __version__ = "$Revision: 1.5 $"
 
 import inspect
