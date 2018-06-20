@@ -5,12 +5,10 @@
 Autolog makes the standard Python logging module easier to set up.
 """
 
+from __future__ import absolute_import
 __version__ = "0.1.3"
 
 # Copyright 2005,2007,2009-2010 Michael M. Hoffman <mmh1@washington.edu>
-
-from ez_setup import use_setuptools
-use_setuptools()
 
 from setuptools import find_packages, setup
 
