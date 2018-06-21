@@ -1,5 +1,5 @@
+0.2:
+* add python 3 compatibility
+
 0.1.3:
 * autolog: replace forked-path dependency with path.py
-
-
-
